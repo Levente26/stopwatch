@@ -1,0 +1,19 @@
+$primary: #cacaca !default;
+$secondary: #A9A9A9 !default;
+$light: #eeeeee !default;
+$dark: #1d1d1d !default;
+
+// spacing
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 5px;
+
+// font sizes
+$base-font-size: 1.2rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
