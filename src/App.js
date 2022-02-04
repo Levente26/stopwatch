@@ -12,9 +12,14 @@ import Dashboard from './pages/dashboard/Dashboard'
 import Timer from './pages/timer/Timer'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
+// context 
+import { useAuthContext } from './hooks/useAuthContext'
 
 
 const App = () => {
+
+  const { user } = useAuthContext()
+
   return (
     <div>
       <BrowserRouter>
@@ -24,27 +29,27 @@ const App = () => {
           <Routes>
             <Route 
               path='/' 
-              element={<Home />} 
+              element={user ? <Home /> : <Navigate to='/login' />} 
             />
             <Route 
               path='/create' 
-              element={<Create />} 
+              element={user ? <Create /> : <Navigate to='/login' />} 
             />
             <Route 
               path='/dashboard' 
-              element={<Dashboard />} 
+              element={user ? <Dashboard /> : <Navigate to='/login' />} 
             />
             <Route 
               path='/timer/:id' 
-              element={<Timer />} 
+              element={user ? <Timer /> : <Navigate to='/login' />} 
             />
             <Route 
               path='/signup' 
-              element={<Signup />} 
+              element={user ? <Navigate to='/dashboard' /> : <Signup />} 
             />
             <Route 
               path='/login' 
-              element={<Login />} 
+              element={user ? <Navigate to='/dashboard' /> : <Login />} 
             />
           </Routes>
         </div>
