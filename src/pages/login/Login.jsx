@@ -14,7 +14,7 @@ const Login = () => {
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='login m-1 p-1 d-f'>
             <h2>Login</h2>
             <label>
                 <span>Email</span>
@@ -34,7 +34,7 @@ const Login = () => {
             </label>
             {!isPending && <button className='btn'>Login</button>}
             {isPending && <button className='btn' disabled >loading</button>}
-            {error && <p>{error}</p>}
+            {error && <p className='error'>{error}</p>}
         </form>
     )
 }

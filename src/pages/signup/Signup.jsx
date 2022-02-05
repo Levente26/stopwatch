@@ -16,8 +16,8 @@ const Signup = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Signup</h2>
+        <form className='signup m-1 p-1 d-f' onSubmit={handleSubmit}>
+            <h2 className='font-lg'>Signup</h2>
             <label>
                 <span>Email</span>
                 <input 
@@ -44,7 +44,7 @@ const Signup = () => {
             </label>
             {!isPending && <button className='btn'>Signup</button>}
             {isPending && <button className='btn' disabled >loading</button>}
-            {error && <p>{error}</p>}
+            {error && <p className='error'>{error}</p>}
         </form>
     )
 }

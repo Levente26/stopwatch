@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+.login {
+    border: 1px solid #ddd;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 5px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -4,6 +4,7 @@ nav {
     box-sizing: border-box;
     position: sticky;
     top: 0;
+    border-bottom: 2px solid $primary;
     ul{
         justify-content: space-between;
         align-items: center;
