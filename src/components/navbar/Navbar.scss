@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+
+nav {
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    ul{
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: $text;
+            text-decoration: none;
+        }
+    }
+}

@@ -21,10 +21,10 @@ const App = () => {
   const { user } = useAuthContext()
 
   return (
-    <div>
+    <div className='d-f'>
       <BrowserRouter>
-        <Sidebar />
-        <div className='d-f'>
+        {user && <Sidebar />}
+        <div className='container'>
           <Navbar />
           <Routes>
             <Route 

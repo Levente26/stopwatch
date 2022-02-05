@@ -1,0 +1,25 @@
+@import '../../scss/variables.scss';
+
+aside {
+    width: 200px;
+    min-height: 100vh;
+    background: $primary;
+    box-sizing: border-box;
+    position: relative;
+    color: $text;
+    .user {
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    a {
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        &:active {
+            background: $background;
+            color: $hightlight;
+            border-radius: 20px 0 0 20px;
+        }
+    }
+}

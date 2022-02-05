@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  background: $primary;
+  background: $background;
 }
 
 ol,
@@ -50,4 +50,9 @@ select {
   appearance: none !important;
   -webkit-appearance: none !important;
   border-radius: 0;
+}
+
+.container {
+  flex-grow: 1;
+  padding: 0 50px;
 }

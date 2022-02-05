@@ -11,24 +11,24 @@ const Navbar = () => {
 
     return (
         <nav>
-            <ul>
+            <ul className='p-1 d-f'>
                 <li>
                     <p>image place</p>
                 </li>
                 {!user && 
                     <>
                         <li>
-                            <Link to='/login'>Login</Link>
+                            <Link to='/login' className='d-f font-md'>Login</Link>
                         </li>
                         <li>
-                            <Link to='/signup'>Signup</Link>
+                            <Link to='/signup' className='d-f font-md'>Signup</Link>
                         </li>
                     </>
                 }
                 {user &&
                     <li>
-                        {!isPending && <button onClick={logout}>Logout</button>}
-                        {isPending && <button>Logging out...</button>}
+                        {!isPending && <button onClick={logout} className='d-f font-md'>Logout</button>}
+                        {isPending && <button className='d-f font-md'>Logging out...</button>}
                     </li>
                 }
             </ul>
