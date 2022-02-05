@@ -15,7 +15,7 @@ const Login = () => {
     
     return (
         <form onSubmit={handleSubmit} className='login m-1 p-1 d-f'>
-            <h2>Login</h2>
+            <h2 className='font-lg'>Login</h2>
             <label>
                 <span>Email</span>
                 <input 

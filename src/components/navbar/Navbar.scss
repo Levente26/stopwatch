@@ -6,11 +6,16 @@ nav {
     top: 0;
     border-bottom: 2px solid $primary;
     ul{
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         a {
             color: $text;
             text-decoration: none;
+        }
+        .logo{
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
         }
     }
 }

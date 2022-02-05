@@ -16,7 +16,7 @@ aside {
         text-align: center;
         text-decoration: none;
         width: 100%;
-        &:active {
+        &:hover {
             background: $background;
             color: $hightlight;
             border-radius: 20px 0 0 20px;
