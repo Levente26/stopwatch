@@ -45,11 +45,11 @@ const App = () => {
             />
             <Route 
               path='/signup' 
-              element={user ? <Navigate to='/dashboard' /> : <Signup />} 
+              element={user ? <Navigate to='/' /> : <Signup />} 
             />
             <Route 
               path='/login' 
-              element={user ? <Navigate to='/dashboard' /> : <Login />} 
+              element={user ? <Navigate to='/' /> : <Login />} 
             />
           </Routes>
         </div>

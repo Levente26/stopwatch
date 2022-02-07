@@ -6,7 +6,7 @@ aside {
     background: $primary;
     box-sizing: border-box;
     position: relative;
-    color: $text;
+    color: #fff;
     .user {
         font-weight: bold;
         letter-spacing: 1px;
@@ -16,10 +16,12 @@ aside {
         text-align: center;
         text-decoration: none;
         width: 100%;
+        color: #fff;
         &:hover {
             background: $background;
             color: $hightlight;
             border-radius: 20px 0 0 20px;
+            transition: ease-in-out 0.3s;
         }
     }
 }

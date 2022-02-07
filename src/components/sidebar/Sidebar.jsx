@@ -15,6 +15,8 @@ const Sidebar = () => {
             </div>
             <ul className='mt-4 ml-1 font-md'>
                 <li className='mt-2'>
+                    <Link to='/' className='p-1 d-f'>My Question</Link>
+                </li><li className='mt-2'>
                     <Link to='/dashboard' className='p-1 d-f'>Dashboard</Link>
                 </li>
                 <li className='mt-2'>

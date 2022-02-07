@@ -1,0 +1,12 @@
+@import '../../scss/variables.scss';
+
+.question-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .question{
+        font-style: italic;
+    }
+}

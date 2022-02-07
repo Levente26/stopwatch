@@ -33,7 +33,7 @@ const Login = () => {
                 />
             </label>
             {!isPending && <button className='btn'>Login</button>}
-            {isPending && <button className='btn' disabled >loading</button>}
+            {isPending && <button className='btn' disabled >Loggin in...</button>}
             {error && <p className='error'>{error}</p>}
         </form>
     )
