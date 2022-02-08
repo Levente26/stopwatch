@@ -1,7 +1,10 @@
 import './TimerList.scss'
 
 
-const TimerList = () => {
+const TimerList = ({ timers }) => {
+
+    console.log(timers)
+
     return (
         <div>
 
