@@ -24,9 +24,9 @@ const Create = () => {
     }
 
     return (
-        <div className='mt-1 p-1 create-form'>
-            <h2 className='page-title'>Create a new Timer</h2>
-            <form>
+        <div className='p-1 d-f create-form'>
+            <h2 className='font-lg'>Create a new Timer</h2>
+            <form className='mt-2'>
                 <label>
                     <span>Timer name:</span>
                     <input 
@@ -45,7 +45,7 @@ const Create = () => {
                         onChange={(e) => setDetail(e.target.value)}
                     />
                 </label>
-                <label>
+                {/* <label>
                     <span>Short break time:</span>
                     <input 
                         type="number"
@@ -62,9 +62,9 @@ const Create = () => {
                         value={longBreak}
                         onChange={(e) => setLongBrake(e.target.value)}
                     />
-                </label>
+                </label> */}
+                <button onClick={addDoc} className='btn font-md mt-2'>Add Timer</button>
             </form>
-            <button onClick={addDoc} className='btn'>Add Timer</button>
         </div>
     )
 }

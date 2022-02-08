@@ -5,23 +5,34 @@ aside {
     min-height: 100vh;
     background: $primary;
     box-sizing: border-box;
-    position: relative;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     .user {
         font-weight: bold;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         text-align: center;
     }
-    a {
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        color: #fff;
-        &:hover {
-            background: $background;
-            color: $hightlight;
-            border-radius: 20px 0 0 20px;
-            transition: ease-in-out 0.3s;
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        a {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            color: #fff;
+            &:hover {
+                background: $background;
+                color: $hightlight;
+                border-radius: 20px 0 0 20px;
+                transition: ease-in-out 0.3s;
+            }
         }
+    }
+    .gif{
+        width: 100%;
     }
 }

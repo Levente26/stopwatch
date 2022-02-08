@@ -33,7 +33,7 @@ const Stopper = ( ) => {
     useEffect(() => {
 
         const switchMode = () => {
-            const nextMode = modeRef.current === null ? 'work' : 'break'
+            const nextMode = modeRef.current === null ? 'work' : modeRef.current === 'work' ? 'break' : 'work'
             const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes) * 60
             
             setMode(nextMode)
@@ -75,8 +75,8 @@ const Stopper = ( ) => {
                 text={minutes + ':' + seconds} 
                 styles={buildStyles({
                     textColor: 'black',
-                    pathColor: mode === 'work' ? red : green,
-                    trailColor: 'rgba(255,255,255,.2)',
+                    pathColor: mode === 'work' ? green : red,
+                    trailColor: '#888888b2',
                 })}
             />
             <div>
