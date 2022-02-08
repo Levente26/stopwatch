@@ -9,15 +9,23 @@ import SettingsButton from './buttons/SettingsButton';
 // context & hooks
 import { useContext, useState, useEffect, useRef } from 'react';
 import SettingContext from '../../context/SettingContext';
+import { useParams } from 'react-router-dom';
+import { useDocument } from '../../hooks/useDocument'
+// pictures
+import work from '../../asserts/work.png'
+import winkingFace from '../../asserts/winking-face.png'
 
-const red = '#f54e4e';
-const green = '#4aec8c';
+const red = '#b91818';
+const green = '#27c72f';
 
-const Stopper = ( ) => {
+const Stopper = () => {
 
     const settingsInfo = useContext(SettingContext)
+    const { id } = useParams()
+    const { document } = useDocument('timers', id)
 
     const [isPaused, setIsPaused] = useState(true)
+    const [isStarted, setIsStarted] = useState(false)
     const [secondsLeft, setSecondsLeft] = useState(0)
     const [mode, setMode] = useState(null) 
     
@@ -69,6 +77,38 @@ const Stopper = ( ) => {
 
     return (
         <div>
+            {document && <div className='header mt-1'>
+                {mode === 'work' && isStarted && !isPaused ?
+                    <>
+                        <div className='d-f mode mb-1'>
+                            <img className='img mr-1' src={work} alt='gear' />
+                            <h3 className='font-lg'>{document.name} is currently in progress</h3>
+                            <img className='img ml-1' src={work} alt='gear' />
+                        </div>
+                        <p>{document.detail} </p>
+                    </>
+                    : isPaused && isStarted ? 
+                    <>
+                        <div className='d-f mode mb-1'>
+                            <h3 className='font-lg'>{document.name} is paused</h3>
+                        </div>
+                        <p>{document.detail} </p>
+                    </>
+                    : 
+                    <>
+                        <div className='d-f mode mb-1'>
+                            <h3 className='font-lg'>{document.name}</h3>
+                        </div>
+                        <p>{document.detail} </p>
+                    </>
+                }
+                {mode === 'break' && 
+                    <div className='d-f mode mt-1'>
+                        <h3 className='font-lg'>Time is up, take a break</h3>
+                        <img className='img ml-1' src={winkingFace} alt='winking face' />
+                    </div>
+                }
+            </div>}
             <CircularProgressbar 
                 className='progressbar mt-2'
                 value={percentage} 
@@ -76,17 +116,17 @@ const Stopper = ( ) => {
                 styles={buildStyles({
                     textColor: 'black',
                     pathColor: mode === 'work' ? green : red,
-                    trailColor: '#888888b2',
+                    trailColor: '#acacacb1',
                 })}
             />
-            <div>
+            <div className='d-f p-1 mt-1 btns'>
                 {isPaused ? 
-                    <StartButton onClick={() => {setIsPaused(false); isPausedRef.current = false}} /> 
+                    <>
+                        <StartButton onClick={() => {setIsStarted(true); setIsPaused(false); isPausedRef.current = false}} /> 
+                        <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
+                    </>
                     : 
-                    <StopButton onClick={() => {setIsPaused(true); isPausedRef.current = true}} />}
-            </div>
-            <div>
-                <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
+                    mode === 'work' && <StopButton onClick={() => {setIsPaused(true); isPausedRef.current = true}} />}
             </div>
         </div>
     )

@@ -6,13 +6,16 @@ const TimerList = ({ timers }) => {
     console.log(timers)
 
     return (
-        <div className='timer-list'>
+        <ul>
             {timers.map(timer => (
-                <Link key={timer.id} to={`/timer/${timer.id}`} className='p-1 m-1'>
-                    <h4>{timer.name}</h4>                    
-                </Link>
+                <li className='list-item pl-1 m-1'>
+                    <Link key={timer.id} to={`/timer/${timer.id}`} className='p-1 m-1 link'>
+                        <h4 className='font-lg'>{timer.name}</h4>         
+                        <p>{timer.detail}</p>           
+                    </Link>
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 export default TimerList

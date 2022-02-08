@@ -21,7 +21,7 @@ const Create = () => {
 
     return (
         <div className='p-1 d-f create-form'>
-            <h2 className='font-lg'>Create a new Timer</h2>
+            <h2 className='font-lg mt-1'>Create a new Timer</h2>
             <form className='mt-2'>
                 <label>
                     <span>Timer name:</span>

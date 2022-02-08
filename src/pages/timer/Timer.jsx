@@ -9,7 +9,7 @@ const Timer = () => {
 
     const [showSettings, setShowSettings] = useState(false) 
     const [workMinutes, setWorkMinutes] = useState(15)
-    const [breakMinutes, setBreakMinutes] = useState(45)
+    const [breakMinutes, setBreakMinutes] = useState(20)
 
     return (
         <main>

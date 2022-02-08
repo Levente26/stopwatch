@@ -10,7 +10,7 @@ const Settings = () => {
     return (
         <div>
             <label>
-                <span>Work minutes {settingsInfo.workMinutes}:00</span>
+                <span>Work time {settingsInfo.workMinutes} minutes</span>
                 <ReactSlider 
                     className='slider'
                     thumbClassName={'thumb'}
@@ -18,11 +18,11 @@ const Settings = () => {
                     value={settingsInfo.workMinutes}
                     onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
                     min={1}
-                    max={120}
+                    max={60}
                 />
             </label>
             <label>
-                <span>Break minutes {settingsInfo.breakMinutes}:00</span>
+                <span>Break time {settingsInfo.breakMinutes} minutes</span>
                 <ReactSlider 
                     className='slider green'
                     thumbClassName={'thumb'}
@@ -30,7 +30,7 @@ const Settings = () => {
                     value={settingsInfo.breakMinutes}
                     onChange={newValue => settingsInfo.setBreakMinutes(newValue)}
                     min={1}
-                    max={120}
+                    max={60}
                 />
             </label>
             <div>
