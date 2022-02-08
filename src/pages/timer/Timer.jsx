@@ -1,12 +1,29 @@
-import './Timer.scss'
-
+import './Stopper.scss'
+import { useState } from 'react'
+import Stopper from './Stopper'
+import Settings from './Settings'
+// context
+import SettingContext from '../../context/SettingContext'
 
 const Timer = () => {
 
-    return (
-        <div>
+    const [showSettings, setShowSettings] = useState(false) 
+    const [workMinutes, setWorkMinutes] = useState(15)
+    const [breakMinutes, setBreakMinutes] = useState(45)
 
-        </div>
+    return (
+        <main>
+            <SettingContext.Provider value={{
+                showSettings,
+                setShowSettings,
+                workMinutes,
+                setWorkMinutes,
+                breakMinutes,
+                setBreakMinutes,
+            }}>
+                {showSettings ? <Settings /> : <Stopper />}
+            </SettingContext.Provider>
+        </main>
     )
 }
 export default Timer

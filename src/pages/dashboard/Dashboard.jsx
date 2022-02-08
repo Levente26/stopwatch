@@ -7,7 +7,7 @@ import TimerList from '../../components/timerlist/TimerList'
 const Dashboard = () => {
 
     const { user } = useAuthContext()
-    const { documents, error } = useCollection('timers')
+    const { documents } = useCollection('timers')
 
     return (
         <div>
