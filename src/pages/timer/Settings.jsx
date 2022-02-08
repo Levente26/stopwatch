@@ -10,7 +10,7 @@ const Settings = () => {
     return (
         <div className='mt-3'>
             <label>
-                <span className='font-md'>Work time {settingsInfo.workMinutes} minutes</span>
+                <span className='font-md ml-1'>Work time {settingsInfo.workMinutes} minutes</span>
                 <ReactSlider 
                     className='slider'
                     thumbClassName={'thumb'}
@@ -22,7 +22,7 @@ const Settings = () => {
                 />
             </label>
             <label className='mt-2'>
-                <span className='font-md'>Break time {settingsInfo.breakMinutes} minutes</span>
+                <span className='font-md ml-1'>Break time {settingsInfo.breakMinutes} minutes</span>
                 <ReactSlider 
                     className='slider'
                     thumbClassName={'thumb'}
