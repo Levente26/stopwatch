@@ -8,9 +8,9 @@ const Settings = () => {
     const settingsInfo = useContext(SettingContext)
 
     return (
-        <div>
+        <div className='mt-3'>
             <label>
-                <span>Work time {settingsInfo.workMinutes} minutes</span>
+                <span className='font-md'>Work time {settingsInfo.workMinutes} minutes</span>
                 <ReactSlider 
                     className='slider'
                     thumbClassName={'thumb'}
@@ -21,10 +21,10 @@ const Settings = () => {
                     max={60}
                 />
             </label>
-            <label>
-                <span>Break time {settingsInfo.breakMinutes} minutes</span>
+            <label className='mt-2'>
+                <span className='font-md'>Break time {settingsInfo.breakMinutes} minutes</span>
                 <ReactSlider 
-                    className='slider green'
+                    className='slider'
                     thumbClassName={'thumb'}
                     trackClassName={'track'}
                     value={settingsInfo.breakMinutes}
@@ -33,7 +33,7 @@ const Settings = () => {
                     max={60}
                 />
             </label>
-            <div>
+            <div className='mt-2'>
                 <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
             </div>
         </div>

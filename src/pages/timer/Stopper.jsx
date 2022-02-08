@@ -17,6 +17,7 @@ import winkingFace from '../../asserts/winking-face.png'
 
 const red = '#b91818';
 const green = '#27c72f';
+const yellow = '#e2e20b';
 
 const Stopper = () => {
 
@@ -62,7 +63,7 @@ const Stopper = () => {
             } 
 
             tick()
-        }, 1000)
+        }, 100)
 
         return () => clearInterval(interval)
 
@@ -115,7 +116,7 @@ const Stopper = () => {
                 text={minutes + ':' + seconds} 
                 styles={buildStyles({
                     textColor: 'black',
-                    pathColor: mode === 'work' ? green : red,
+                    pathColor: mode === 'work' && !isPaused ? green : mode === 'work' && isPaused ? yellow : red,
                     trailColor: '#acacacb1',
                 })}
             />
