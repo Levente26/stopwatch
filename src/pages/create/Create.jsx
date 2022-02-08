@@ -8,8 +8,6 @@ const Create = () => {
 
     const [name, setName] = useState('')
     const [detail, setDetail] = useState('')
-    const [shortBreak, setShortBrake] = useState('')
-    const [longBreak, setLongBrake] = useState('')
 
     const { user } = useAuthContext()
     const { addDocument } = useFirestore('timers')
@@ -17,9 +15,7 @@ const Create = () => {
     const addDoc = () => {
         setName('')
         setDetail('')
-        setShortBrake('')
-        setLongBrake('')
-        const doc = { name, detail, shortBreak, longBreak, user: user.displayName }
+        const doc = { name, detail, user: user.displayName }
         addDocument(doc)
     }
 
@@ -45,24 +41,6 @@ const Create = () => {
                         onChange={(e) => setDetail(e.target.value)}
                     />
                 </label>
-                {/* <label>
-                    <span>Short break time:</span>
-                    <input 
-                        type="number"
-                        required
-                        value={shortBreak}
-                        onChange={(e) => setShortBrake(e.target.value)}
-                    />
-                </label>
-                <label>
-                    <span>Long break time:</span>
-                    <input 
-                        type="number"
-                        required
-                        value={longBreak}
-                        onChange={(e) => setLongBrake(e.target.value)}
-                    />
-                </label> */}
                 <button onClick={addDoc} className='btn font-md mt-2'>Add Timer</button>
             </form>
         </div>
