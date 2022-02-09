@@ -11,12 +11,13 @@ const ThemeSelector = () => {
     } 
 
     return (
-        <div className={`${theme} theme-selector display-f pt-1`}>
-            <div className='theme-toggle'>
+        <div className={`${theme} pt-1`}>
+            <div>
                 <img 
                     src={ModeSwitch}
                     alt='light/dark toggle icon'
                     onClick={toggleMode}
+                    className='modeimg'
                     style={{ filter: theme === 'dark' ? 'invert(100%)' : 'invert(20%)'}}
                 />
             </div>

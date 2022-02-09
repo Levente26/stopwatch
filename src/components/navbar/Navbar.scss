@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '../../scss/breakpoints.scss';
 
 nav {
     box-sizing: border-box;
@@ -8,9 +9,16 @@ nav {
     ul{
         justify-content: space-around;
         align-items: center;
+        padding: $base-padding 0;
+        li {
+            @include sm {
+                margin: 0.5rem;
+            }
+        }
         a {
             color: $text;
             text-decoration: none;
+            
         }
         .logo{
             justify-content: center;

@@ -17,7 +17,7 @@ const Signup = () => {
     }
 
     return (
-        <form className='signup m-1 p-1 d-f' onSubmit={handleSubmit}>
+        <form className='signup p-1 m-1 d-f' onSubmit={handleSubmit}>
             <h2 className='font-lg'>Signup</h2>
             <label>
                 <span>Email</span>
@@ -55,8 +55,8 @@ const Signup = () => {
                     value={question}
                 />
             </label>
-            {!isPending && <button className='btn'>Signup</button>}
-            {isPending && <button className='btn' disabled >Signing up...</button>}
+            {!isPending && <button className='btn font-md'>Signup</button>}
+            {isPending && <button className='btn font-md' disabled >Signing up...</button>}
             {error && <p className='error'>{error}</p>}
         </form>
     )

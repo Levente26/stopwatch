@@ -10,8 +10,9 @@ const Home = () => {
 
     return (
         <div className='p-2 mt-2 question-box'>
-           <h2 className='font-md'>My focusing question is ...</h2>
+           <h2 className='font-md '>My focusing question is ...</h2>
            {document && <p className='p-1 font-lg question'>{document.question}</p>}
+           <iframe src="https://giphy.com/embed/jNYUeDwoUoloEswJm8" width="100%" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         </div>
     )
 }

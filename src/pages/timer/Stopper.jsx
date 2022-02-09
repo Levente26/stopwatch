@@ -85,7 +85,7 @@ const Stopper = () => {
                     <>
                         <div className='d-f mode mb-1'>
                             <img className='img mr-1' src={work} alt='gear' />
-                            <h3 className='font-lg'>{document.name} is currently in progress</h3>
+                            <h3>{document.name} is currently in progress</h3>
                             <img className='img ml-1' src={work} alt='gear' />
                         </div>
                         <p>{document.detail} </p>
@@ -93,21 +93,21 @@ const Stopper = () => {
                     : isPaused && isStarted ? 
                     <>
                         <div className='d-f mode mb-1'>
-                            <h3 className='font-lg'>{document.name} is paused</h3>
+                            <h3>{document.name} is paused</h3>
                         </div>
                         <p>{document.detail} </p>
                     </>
                     : 
                     <>
                         <div className='d-f mode mb-1'>
-                            <h3 className='font-lg'>{document.name}</h3>
+                            <h3>{document.name}</h3>
                         </div>
                         <p>{document.detail} </p>
                     </>
                 }
                 {mode === 'break' && 
                     <div className='d-f mode mt-1'>
-                        <h3 className='font-lg'>Time is up, take a break</h3>
+                        <h3>Time is up, take a break</h3>
                         <img className='img ml-1' src={winkingFace} alt='winking face' />
                     </div>
                 }
@@ -122,7 +122,7 @@ const Stopper = () => {
                     trailColor: '#acacacb1',
                 })}
             />
-            <div className='d-f p-1 mt-1 btns'>
+            <div className='d-f p-1 btns'>
                 {isPaused ? 
                     <>
                         <StartButton onClick={() => {setIsStarted(true); setIsPaused(false); isPausedRef.current = false}} /> 

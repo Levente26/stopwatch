@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <ul className='p-1 d-f'>
+            <ul className='d-f'>
                 <li className='d-f logo'>
                     <img 
                         src={Stopper} 
@@ -26,10 +26,10 @@ const Navbar = () => {
                 {!user && 
                     <>
                         <li>
-                            <Link to='/signup' className='d-f font-md'>Signup</Link>
+                            <Link to='/signup' className='d-f font-md btn'>Signup</Link>
                         </li>
                         <li>
-                            <Link to='/login' className='d-f font-md'>Login</Link>
+                            <Link to='/login' className='d-f font-md btn'>Login</Link>
                         </li>
                     </>
                 }

@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '../../scss/breakpoints.scss';
 
 aside {
     width: 200px;
@@ -9,21 +10,38 @@ aside {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    @include sm {
+        max-width: 80px;
+    }
     .user {
         font-weight: bold;
+        padding: $base-padding;
         letter-spacing: 2px;
         text-align: center;
+        font-size: $font-size-lg;
+        @include sm {
+            font-size: $font-size-sm;
+        }
     }
     ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        gap: 50px;
+        font-size: $base-font-size;
+        @include sm {
+            font-size: $font-size-sm;
+        }
         a {
             text-align: center;
             text-decoration: none;
             width: 100%;
             color: #fff;
+            padding: $base-padding;
+            @include sm {
+                padding: $base-padding / 2;
+                font-size: $font-size-sm;
+            }
             &:hover {
                 background: $background;
                 color: $hightlight;

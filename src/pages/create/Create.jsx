@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { useFirestore } from '../../hooks/useFirestore'
 
-
 const Create = () => {
 
     const [name, setName] = useState('')
@@ -20,9 +19,9 @@ const Create = () => {
     }
 
     return (
-        <div className='p-1 d-f create-form'>
+        <div className={`d-f create-form`}>
             <h2 className='font-lg mt-1'>Create a new Timer</h2>
-            <form className='mt-2'>
+            <form>
                 <label>
                     <span>Timer name:</span>
                     <input 

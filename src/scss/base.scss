@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import 'variables';
+@import 'breakpoints';
 
 * {
   margin: 0;
@@ -15,6 +16,7 @@
 body {
   font-family: 'Nunito', sans-serif;
   background: $background;
+  min-height: 100vh;
 }
 
 ol,
@@ -27,6 +29,10 @@ li {
 .container {
   flex-grow: 1;
   padding: 0 50px;
+  min-height: 100vh;
+  @include sm {
+    padding: 0 10px;
+  }
 }
 
 .btn {
@@ -46,7 +52,7 @@ li {
 /* forms */
 label {
   display: block;
-  margin: 24px auto;
+  margin: 12px auto;
 }
 label span {
   display: block;

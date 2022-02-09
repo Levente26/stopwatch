@@ -6,22 +6,21 @@ import hourGif from '../../asserts/giphy.gif'
 const Sidebar = () => {
 
     const { user } = useAuthContext()
-    console.log(user)
 
     return (
         <aside>
-            <div className='user font-lg p-1'>
+            <div className='user'>
                 {user && <p className='mt-1'>Hey {user.displayName}</p>}
             </div>
-            <ul className='ml-1 font-md'>
+            <ul>
                 <li>
-                    <Link to='/' className='p-1 d-f'>My Question</Link>
+                    <Link to='/' className='d-f'>My Question</Link>
                 </li>
                 <li>
-                    <Link to='/dashboard' className='p-1 d-f'>Dashboard</Link>
+                    <Link to='/dashboard' className='d-f'>Dashboard</Link>
                 </li>
                 <li>
-                    <Link to='/create' className='p-1 d-f'>New Timer</Link>
+                    <Link to='/create' className='d-f'>New Timer</Link>
                 </li>
             </ul>
             <img className='gif' src={hourGif} alt='gif' />

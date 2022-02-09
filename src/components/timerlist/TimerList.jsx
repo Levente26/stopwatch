@@ -5,7 +5,7 @@ const TimerList = ({ timers }) => {
     return (
         <ul>
             {timers.map(timer => (
-                <li className='list-item pl-1 m-1'>
+                <li className='list-item'>
                     <Link key={timer.id} to={`/timer/${timer.id}`} className='p-1 m-1 link'>
                         <h4 className='font-lg'>{timer.name}</h4>         
                         <p>{timer.detail}</p>           

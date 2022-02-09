@@ -27,7 +27,7 @@ const App = () => {
     <div className={`${theme} d-f`}>
       <BrowserRouter>
         {user && <Sidebar />}
-        <div className='container'>
+        <div className={`${theme} container`}>
           <Navbar />
           <ThemeSelector />
           <Routes>
