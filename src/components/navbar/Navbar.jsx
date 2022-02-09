@@ -2,7 +2,7 @@ import './Navbar.scss'
 import { Link } from 'react-router-dom'
 import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
-import Stopper from '../../asserts/timer.svg'
+import Stopper from '../../asserts/timer.png'
 // context
 import { useTheme } from '../../hooks/useTheme'
 
@@ -19,9 +19,9 @@ const Navbar = () => {
                     <img 
                         src={Stopper} 
                         alt='stopper' 
-                        style={{ filter: theme === 'dark' ? 'invert(100%)' : 'invert(20%)'}}
+                        style={{ filter: theme === 'dark' ? 'invert(20%)' : 'invert(100%)'}}
+                        className='stopwatch'
                     />
-                    <p className='font-sm'>Stopwatch</p>
                 </li>
                 {!user && 
                     <>

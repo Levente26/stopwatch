@@ -9,7 +9,7 @@ nav {
     ul{
         justify-content: space-around;
         align-items: center;
-        padding: $base-padding 0;
+        padding: $base-padding / 2 0;
         li {
             @include sm {
                 margin: 0.5rem;
@@ -24,6 +24,10 @@ nav {
             justify-content: center;
             align-items: center;
             gap: 5px;
+            .stopwatch {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
 }
