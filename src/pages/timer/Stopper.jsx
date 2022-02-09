@@ -15,6 +15,9 @@ import { useTheme } from '../../hooks/useTheme'
 // pictures
 import work from '../../asserts/work.png'
 import winkingFace from '../../asserts/winking-face.png'
+// sound effect
+import useSound from 'use-sound'
+import radioVoice from '../../voice/radiocheck.wav'
 
 const red = '#b91818';
 const green = '#27c72f';
@@ -41,15 +44,15 @@ const Stopper = () => {
         setSecondsLeft(secondsLeftRef.current)
     }
 
+    
+    const [radioCheck] = useSound(radioVoice, {volume: 0.5})
     useEffect(() => {
 
         const switchMode = () => {
             const nextMode = modeRef.current === null ? 'work' : modeRef.current === 'work' ? 'break' : 'work'
             const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes) * 60
-            
             setMode(nextMode)
             modeRef.current = nextMode
-    
             setSecondsLeft(nextSeconds)
             secondsLeftRef.current = nextSeconds
         }
@@ -61,15 +64,19 @@ const Stopper = () => {
             }  
 
             if(secondsLeftRef.current === 0){
-                return switchMode()
+                if(mode === 'work'){
+                    radioCheck()
+                }
+                switchMode()
             } 
 
+
             tick()
-        }, 1000)
+        }, 100)
 
         return () => clearInterval(interval)
 
-    }, [settingsInfo])
+    }, [settingsInfo, mode])
 
     const total = mode === 'work' ? settingsInfo.workMinutes * 60 : settingsInfo.breakMinutes * 60
 
@@ -125,6 +132,7 @@ const Stopper = () => {
             <div className='d-f p-1 btns'>
                 {isPaused ? 
                     <>
+                        <button onClick={radioCheck}>Radio Check</button>
                         <StartButton onClick={() => {setIsStarted(true); setIsPaused(false); isPausedRef.current = false}} /> 
                         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
                     </>
