@@ -10,6 +10,7 @@ import Home from './pages/home/Home'
 import Create from './pages/create/Create'
 import Dashboard from './pages/dashboard/Dashboard'
 import Timer from './pages/timer/Timer'
+import UserProfile from './pages/profile/UserProfile'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 // context 
@@ -46,6 +47,10 @@ const App = () => {
             <Route 
               path='/timer/:id' 
               element={user ? <Timer /> : <Navigate to='/login' />} 
+            />
+            <Route 
+              path='/profile/:id' 
+              element={user ? <UserProfile /> : <Navigate to='/login' />} 
             />
             <Route 
               path='/signup' 

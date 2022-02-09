@@ -1,9 +1,11 @@
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
+// pictures
+import Profile from '../../asserts/profile.png'
+import Stopper from '../../asserts/timer.png'
+// context & hook
 import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
-import Stopper from '../../asserts/timer.png'
-// context
 import { useTheme } from '../../hooks/useTheme'
 
 const Navbar = () => {
@@ -15,6 +17,16 @@ const Navbar = () => {
     return (
         <nav>
             <ul className='d-f'>
+                <li className='d-f profile'>
+                    {user && <Link to={`/profile/${user.uid}`}>
+                        <img 
+                            src={Profile} 
+                            alt='profile' 
+                            style={{ filter: theme === 'dark' ? 'invert(20%)' : 'invert(0%)'}}
+                            className='user'
+                        />
+                    </Link>}
+                </li>
                 <li className='d-f logo'>
                     <img 
                         src={Stopper} 
