@@ -44,7 +44,7 @@ const StopperHeader = ( { mode, isStarted, isPaused, isBreak, doc } ) => {
                     </div>
                 }
                 {isBreak && 
-                    <h2 className='mt-2 mb-2'>
+                    <h2 className='mt-2 mb-2' style={{fontStyle: 'italic'}}>
                         {document.question} ?
                     </h2>
                 }
