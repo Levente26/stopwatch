@@ -10,6 +10,7 @@ const Timer = () => {
     const [showSettings, setShowSettings] = useState(false) 
     const [workMinutes, setWorkMinutes] = useState(15)
     const [breakMinutes, setBreakMinutes] = useState(20)
+    const [longBreakMinutes, setLongBreakMinutes] = useState(45)
 
     return (
         <main>
@@ -20,6 +21,8 @@ const Timer = () => {
                 setWorkMinutes,
                 breakMinutes,
                 setBreakMinutes,
+                longBreakMinutes,
+                setLongBreakMinutes
             }}>
                 {showSettings ? <Settings /> : <Stopper />}
             </SettingContext.Provider>

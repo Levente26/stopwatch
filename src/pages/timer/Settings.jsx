@@ -33,6 +33,18 @@ const Settings = () => {
                     max={60}
                 />
             </label>
+            <label className='mt-2'>
+                <span className='font-md ml-1'>Long break time {settingsInfo.longBreakMinutes} minutes</span>
+                <ReactSlider 
+                    className='slider'
+                    thumbClassName={'thumb'}
+                    trackClassName={'track'}
+                    value={settingsInfo.longBreakMinutes}
+                    onChange={newValue => settingsInfo.setLongBreakMinutes(newValue)}
+                    min={5}
+                    max={120}
+                />
+            </label>
             <div className='mt-2'>
                 <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
             </div>
