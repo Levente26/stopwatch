@@ -26,7 +26,6 @@ const Create = () => {
                     <span>Timer name:</span>
                     <input 
                         type="text"
-                        required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -35,7 +34,6 @@ const Create = () => {
                     <span>Timer details:</span>
                     <input 
                         type="text"
-                        required
                         value={detail}
                         onChange={(e) => setDetail(e.target.value)}
                     />
