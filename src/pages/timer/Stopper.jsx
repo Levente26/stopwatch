@@ -11,6 +11,7 @@ import { useContext, useState, useEffect, useRef } from 'react';
 import SettingContext from '../../context/SettingContext';
 import { useParams } from 'react-router-dom';
 import { useDocument } from '../../hooks/useDocument'
+import { useTheme } from '../../hooks/useTheme'
 // pictures
 import work from '../../asserts/work.png'
 import winkingFace from '../../asserts/winking-face.png'
@@ -24,6 +25,7 @@ const Stopper = () => {
     const settingsInfo = useContext(SettingContext)
     const { id } = useParams()
     const { document } = useDocument('timers', id)
+    const { theme } = useTheme()
 
     const [isPaused, setIsPaused] = useState(true)
     const [isStarted, setIsStarted] = useState(false)
@@ -63,7 +65,7 @@ const Stopper = () => {
             } 
 
             tick()
-        }, 100)
+        }, 1000)
 
         return () => clearInterval(interval)
 
@@ -78,7 +80,7 @@ const Stopper = () => {
 
     return (
         <div>
-            {document && <div className='header mt-1'>
+            {document && <div className='header'>
                 {mode === 'work' && isStarted && !isPaused ?
                     <>
                         <div className='d-f mode mb-1'>
@@ -111,11 +113,11 @@ const Stopper = () => {
                 }
             </div>}
             <CircularProgressbar 
-                className='progressbar mt-2'
+                className='progressbar mt-1'
                 value={percentage} 
                 text={minutes + ':' + seconds} 
                 styles={buildStyles({
-                    textColor: 'black',
+                    textColor: theme === 'dark' ? 'white' : 'black',
                     pathColor: mode === 'work' && !isPaused ? green : mode === 'work' && isPaused ? yellow : red,
                     trailColor: '#acacacb1',
                 })}

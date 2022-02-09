@@ -3,18 +3,24 @@ import { Link } from 'react-router-dom'
 import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import Stopper from '../../asserts/timer.svg'
-
+// context
+import { useTheme } from '../../hooks/useTheme'
 
 const Navbar = () => {
 
     const { logout, isPending } = useLogout()
     const { user } = useAuthContext()
+    const { theme } = useTheme()
 
     return (
         <nav>
             <ul className='p-1 d-f'>
                 <li className='d-f logo'>
-                    <img src={Stopper} alt='stopper' />
+                    <img 
+                        src={Stopper} 
+                        alt='stopper' 
+                        style={{ filter: theme === 'dark' ? 'invert(100%)' : 'invert(20%)'}}
+                    />
                     <p className='font-sm'>Stopwatch</p>
                 </li>
                 {!user && 

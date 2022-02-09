@@ -1,9 +1,10 @@
 @import '../../scss/variables.scss';
+
 ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
     .list-item{
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,.9);
         border-radius: 5px;
         box-shadow: 0 0 1px 1px rgb(41, 41, 41);
         display: flex;

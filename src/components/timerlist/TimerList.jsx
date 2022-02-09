@@ -2,9 +2,6 @@ import './TimerList.scss'
 import { Link } from 'react-router-dom'
 
 const TimerList = ({ timers }) => {
-
-    console.log(timers)
-
     return (
         <ul>
             {timers.map(timer => (

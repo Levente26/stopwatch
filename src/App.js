@@ -14,18 +14,22 @@ import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 // context 
 import { useAuthContext } from './hooks/useAuthContext'
-
+// theme
+import ThemeSelector from './components/themeselector/ThemeSelector'
+import { useTheme } from './hooks/useTheme'
 
 const App = () => {
 
   const { user } = useAuthContext()
-
+  const { theme } = useTheme()
+  
   return (
-    <div className='d-f'>
+    <div className={`${theme} d-f`}>
       <BrowserRouter>
         {user && <Sidebar />}
         <div className='container'>
           <Navbar />
+          <ThemeSelector />
           <Routes>
             <Route 
               path='/' 

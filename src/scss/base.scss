@@ -59,6 +59,7 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid rgb(165, 165, 165);
+  background: rgba(255,255,255,.9);
   border-radius: 4px;
 }
 textarea {
@@ -71,4 +72,11 @@ textarea {
   border-radius: 4px;
   padding: 8px;
   margin: 10px 0;
+}
+
+// dark theme
+
+.dark{
+  background: rgb(65, 65, 65);
+  color: white;
 }
