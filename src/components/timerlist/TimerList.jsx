@@ -2,8 +2,17 @@ import './TimerList.scss'
 import { Link } from 'react-router-dom'
 import deleteIcon from '../../asserts/delete.png'
 import editIcon from '../../asserts/edit.png'
+// hook
+import { useFirestore } from '../../hooks/useFirestore'
 
 const TimerList = ({ timers }) => {
+
+    const { deleteDocument, updateDocument } = useFirestore('timers')
+
+    const updateTimer = () => {
+        
+    }
+
     return (
         <ul>
             {timers.map(timer => (
@@ -17,12 +26,13 @@ const TimerList = ({ timers }) => {
                             className='icon' 
                             src={editIcon} 
                             alt='edit' 
+                            onClick={updateTimer}
                         />
                         <img 
                             className='icon' 
                             src={deleteIcon} 
                             alt='delete' 
-                            // onClick={}
+                            onClick={() => deleteDocument(timer.id)}
                         />
                     </div>   
                 </li>
