@@ -17,7 +17,7 @@ import work from '../../asserts/work.png'
 import winkingFace from '../../asserts/winking-face.png'
 // sound effect
 import useSound from 'use-sound'
-import radioVoice from '../../voice/radiocheck.wav'
+import Voice from '../../voice/voice.wav'
 
 const red = '#b91818';
 const green = '#27c72f';
@@ -45,7 +45,7 @@ const Stopper = () => {
     }
 
     
-    const [radioCheck] = useSound(radioVoice, {volume: 0.5})
+    const [radioCheck] = useSound(Voice, {volume: 0.7})
     useEffect(() => {
 
         const switchMode = () => {
@@ -68,11 +68,9 @@ const Stopper = () => {
                     radioCheck()
                 }
                 switchMode()
-            } 
-
-
+            }
             tick()
-        }, 100)
+        }, 1000)
 
         return () => clearInterval(interval)
 
@@ -132,7 +130,6 @@ const Stopper = () => {
             <div className='d-f p-1 btns'>
                 {isPaused ? 
                     <>
-                        <button onClick={radioCheck}>Radio Check</button>
                         <StartButton onClick={() => {setIsStarted(true); setIsPaused(false); isPausedRef.current = false}} /> 
                         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
                     </>
