@@ -11,7 +11,8 @@ const Create = () => {
     const { user } = useAuthContext()
     const { addDocument } = useFirestore('timers')
 
-    const addDoc = () => {
+    const addDoc = (e) => {
+        e.preventDefault()
         setName('')
         setDetail('')
         const doc = { name, detail, user: user.displayName, createdBy: user.uid }
@@ -21,7 +22,7 @@ const Create = () => {
     return (
         <div className={`d-f create-form`}>
             <h2 className='font-lg mt-1'>Create a new Timer</h2>
-            <form>
+            <form onSubmit={addDoc}>
                 <label>
                     <span>Timer name:</span>
                     <input 
@@ -38,8 +39,8 @@ const Create = () => {
                         onChange={(e) => setDetail(e.target.value)}
                     />
                 </label>
+                <button className='btn font-md mt-2'>Add Timer</button>
             </form>
-            <button onClick={addDoc} className='btn font-md mt-2'>Add Timer</button>
         </div>
     )
 }
