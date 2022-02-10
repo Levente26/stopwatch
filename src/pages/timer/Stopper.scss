@@ -4,7 +4,9 @@
 .progressbar{
     width: 500px;
     height: 300px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider{
@@ -17,6 +19,7 @@
         width: 45px;
         height: 100%;
         border-radius: 50%;
+        cursor: pointer;
     }
 }
 
@@ -50,4 +53,5 @@
 .stopper-btn {
     width: 60px;
     height: 60px;
+    cursor: pointer;
 }

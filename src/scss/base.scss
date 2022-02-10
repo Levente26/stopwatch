@@ -26,30 +26,7 @@ li {
   display: block;
 }
 
-.container {
-  flex-grow: 1;
-  padding: 0 50px;
-  min-height: 100vh;
-  @include sm {
-    padding: 0 10px;
-  }
-}
-
-.btn {
-  padding: 8px 12px;
-  border-radius: 4px;
-  color: $primary;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 10px;
-  &:hover {
-    color: #fff;
-    background-color: $primary;
-  }
-}
-
-/* forms */
+// form
 label {
   display: block;
   margin: 12px auto;
@@ -80,8 +57,34 @@ textarea {
   margin: 10px 0;
 }
 
-// dark theme
+// app
 
+.container {
+  flex-grow: 1;
+  padding: 0 50px;
+  min-height: 100vh;
+  @include sm {
+    padding: 0 10px;
+  }
+}
+
+// button
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: $primary;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 10px;
+  &:hover {
+    color: #fff;
+    background-color: $primary;
+  }
+}
+
+// dark theme
 .dark{
   background: rgb(65, 65, 65);
   color: white;

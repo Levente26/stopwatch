@@ -1,17 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Signup from '../Signup'
 import { AuthContextProvider } from '../../../context/AuthContext'
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { BrowserRouter } from 'react-router-dom';
 
 const MockSignup = () => {
     return (
         <AuthContextProvider>
-        <ThemeProvider>
-        <BrowserRouter>
             <Signup />
-        </BrowserRouter>
-        </ThemeProvider>
         </AuthContextProvider>
     )
 }

@@ -1,16 +1,17 @@
 import './Navbar.scss'
+// router
 import { Link } from 'react-router-dom'
 // picture
 import Stopper from '../../asserts/timer.png'
 // context & hook
-import { useLogout } from '../../hooks/useLogout'
 import { useAuthContext } from '../../hooks/useAuthContext'
+import { useLogout } from '../../hooks/useLogout'
 import { useTheme } from '../../hooks/useTheme'
 
 const Navbar = () => {
 
-    const { logout, isPending } = useLogout()
     const { user } = useAuthContext()
+    const { logout, isPending } = useLogout()
     const { theme } = useTheme()
 
     return (

@@ -8,8 +8,8 @@ const Dashboard = () => {
     const { user } = useAuthContext()
     const { documents } = useCollection('timers')
 
-    console.log(user.uid)
     let docs = []
+    
     if(documents){
         docs = documents.filter(document => document.createdBy === user.uid)
     }

@@ -53,7 +53,6 @@ const Stopper = () => {
 
     useEffect(() => {
         const switchMode = () => {
-
             let nextMode;
             if(isStartedRef.current === true){
                 if(modeRef.current === null) nextMode = 'work'
@@ -89,7 +88,7 @@ const Stopper = () => {
                 return
             }  
             if(secondsLeftRef.current === 0){
-                if(mode === 'work'){
+                if(mode === 'work' || mode === 'break'){
                     radioCheck()
                 }
                 switchMode()
@@ -141,16 +140,18 @@ const Stopper = () => {
                             setIsStarted(true)
                             isStartedRef.current = true 
                             setIsPaused(false)
-                            isPausedRef.current = false}} 
+                            isPausedRef.current = false
+                        }} 
                         /> 
                         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
                     </>
                     : 
                     mode === 'work' && 
-                    <StopButton onClick={() => {
-                        setIsPaused(true) 
-                        isPausedRef.current = true}} 
-                    />}
+                        <StopButton onClick={() => {
+                            setIsPaused(true) 
+                            isPausedRef.current = true}} 
+                        />
+                    }
             </div>
         </div>
     )

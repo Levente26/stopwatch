@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (
         <aside>
             <div className='user'>
-                {user && <p className='mt-1'>Hey {user.displayName}</p>}
+                <p className='mt-1'>Hey {user.displayName}</p>
             </div>
             <ul>
                 <li>

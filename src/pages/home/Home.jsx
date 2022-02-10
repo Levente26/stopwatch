@@ -61,7 +61,7 @@ const Home = () => {
                 />
             }
            </div>
-           <iframe src="https://giphy.com/embed/jNYUeDwoUoloEswJm8" width="100%" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+           <iframe title='question' src="https://giphy.com/embed/jNYUeDwoUoloEswJm8" width="100%" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         </div>
     )
 }

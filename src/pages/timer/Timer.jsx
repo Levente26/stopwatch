@@ -1,5 +1,6 @@
 import './Stopper.scss'
 import { useState } from 'react'
+// components
 import Stopper from './Stopper'
 import Settings from './Settings'
 // context

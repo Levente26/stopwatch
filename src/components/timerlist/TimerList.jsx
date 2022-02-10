@@ -1,9 +1,6 @@
 import './TimerList.scss'
-// hooks
-import { Link } from 'react-router-dom'
-// icon
 import deleteIcon from '../../asserts/delete.png'
-// firestore hook
+import { Link } from 'react-router-dom'
 import { useFirestore } from '../../hooks/useFirestore'
 
 const TimerList = ( { timers } ) => {
