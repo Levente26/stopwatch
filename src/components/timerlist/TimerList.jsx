@@ -18,7 +18,7 @@ const TimerList = ( { timers } ) => {
                         <h4 className='font-lg'>{timer.name}</h4>
                         <p>{timer.detail}</p>
                     </Link>
-                    <div className='icons d-f p-1'>
+                    <div className='icons d-f'>
                         <img 
                             className='icon' 
                             src={deleteIcon} 

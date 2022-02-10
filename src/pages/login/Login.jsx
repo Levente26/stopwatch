@@ -32,8 +32,8 @@ const Login = () => {
                     value={password}
                 />
             </label>
-            {!isPending && <button className='btn'>Login</button>}
-            {isPending && <button className='btn' disabled >Loggin in...</button>}
+            {!isPending && <button className='btn font-md'>Login</button>}
+            {isPending && <button className='btn font-md' disabled >Loggin in...</button>}
             {error && <p className='error'>{error}</p>}
         </form>
     )

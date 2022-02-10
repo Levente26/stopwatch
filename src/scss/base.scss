@@ -36,13 +36,13 @@ li {
 }
 
 .btn {
-  background: rgba(255,255,255, .7);
   padding: 8px 12px;
   border-radius: 4px;
   color: $primary;
+  font-weight: bold;
   cursor: pointer;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 10px;
   &:hover {
     color: #fff;
     background-color: $primary;

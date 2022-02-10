@@ -11,8 +11,8 @@ ul{
         background-color: rgba(255,255,255,.9);
         padding: 0 $base-padding;
         margin: $base-margin;
-        border-radius: 5px;
-        box-shadow: 0 0 1px 1px rgb(41, 41, 41);
+        border-radius: 10px;
+        border: 1px solid rgba(165, 165, 165, 0.7);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,19 +26,43 @@ ul{
             text-decoration: none;
             color: $text;
             width: 100%;
-            // border: 1px solid rgb(165, 165, 165);
             border-radius: 5px;
-            max-height: 200px;
+            @include lg{
+                min-height: 150px;
+            } 
+            &:hover{
+                transform: scale(1.05);
+                color: $primary;
+            }
         }
         .icons {
             border-top: 1px solid rgb(165, 165, 165);
+            border-radius: 20px;
             justify-content: center;
             align-items: center;
             width: 100%;
+            padding: $base-padding / 2;
             .icon {
                 width: 50px;
                 height: 50px;
+                &:hover{
+                    animation: pulse 1.2s infinite;
+                }
             }
         }
     }
 }
+@keyframes pulse {
+    0% {
+      transform: scale(0.95);
+    }
+    
+    70% {
+      transform: scale(1.1);
+    }
+    
+    100% {
+      transform: scale(0.95);
+    }
+}
+

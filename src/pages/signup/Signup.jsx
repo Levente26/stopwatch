@@ -2,7 +2,6 @@ import './Signup.scss'
 import { useState } from 'react'
 import { useSignup } from '../../hooks/useSignup'
 
-
 const Signup = () => {
 
     const [email, setEmail] = useState('')
