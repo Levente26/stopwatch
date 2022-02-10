@@ -17,16 +17,16 @@ const Navbar = () => {
     return (
         <nav>
             <ul className='d-f'>
-                <li className='d-f profile'>
-                    {user && <Link to={`/profile/${user.uid}`}>
+            {user && <li className='d-f profile'>
+                    <Link to={`/profile/${user.uid}`}>
                         <img 
                             src={Profile} 
                             alt='profile' 
                             style={{ filter: theme === 'dark' ? 'invert(20%)' : 'invert(0%)'}}
                             className='user'
                         />
-                    </Link>}
-                </li>
+                    </Link>
+                </li>}
                 <li className='d-f logo'>
                     <img 
                         src={Stopper} 

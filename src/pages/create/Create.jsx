@@ -14,7 +14,7 @@ const Create = () => {
     const addDoc = () => {
         setName('')
         setDetail('')
-        const doc = { name, detail, user: user.displayName }
+        const doc = { name, detail, user: user.displayName, createdBy: user.uid }
         addDocument(doc)
     }
 
@@ -38,8 +38,8 @@ const Create = () => {
                         onChange={(e) => setDetail(e.target.value)}
                     />
                 </label>
-                <button onClick={addDoc} className='btn font-md mt-2'>Add Timer</button>
             </form>
+            <button onClick={addDoc} className='btn font-md mt-2'>Add Timer</button>
         </div>
     )
 }
