@@ -1,7 +1,6 @@
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
-// pictures
-import Profile from '../../asserts/profile.png'
+// picture
 import Stopper from '../../asserts/timer.png'
 // context & hook
 import { useLogout } from '../../hooks/useLogout'
@@ -17,16 +16,6 @@ const Navbar = () => {
     return (
         <nav>
             <ul className='d-f'>
-            {user && <li className='d-f profile'>
-                    <Link to={`/profile/${user.uid}`}>
-                        <img 
-                            src={Profile} 
-                            alt='profile' 
-                            style={{ filter: theme === 'dark' ? 'invert(20%)' : 'invert(0%)'}}
-                            className='user'
-                        />
-                    </Link>
-                </li>}
                 <li className='d-f logo'>
                     <img 
                         src={Stopper} 
