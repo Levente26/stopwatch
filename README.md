@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# **Project Name & Pitch**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stopwatch
 
-## Available Scripts
+An application with which you can manage your daily tasks built with React, Javascript, Sass, Firebase.
 
-In the project directory, you can run:
+## **Installation and Setup Instructions**
 
-### `npm start`
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation: 
+`npm install`
 
-### `npm test`
+To Run Test Suite:
+`npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To Start Server:
+`npm start`
 
-### `npm run build`
+To Visit App:
+`localhost:3000`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Reflection**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This app was a 1 week long test project for a company.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+My task was to create an app with which you can manage your daily tasks.
 
-### `npm run eject`
+I started this process by using the `create-react-app` framework, then adding `react-router-6.2` and connected with `firebase`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In the app after signup and login, there are different pages, one of the **home page**, where you can see your focising question, one of the **create new timer page**, one of the **dashboard** page, from where you can go to the **timer/id page**. Last page you can custumize your timer's details. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The timer has three modes.
+> *work*
+*break*
+> *long break*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Each mode has its own color on the progressbar
+> *work mode*
+* in progress **green**
+* paused **yellow**
+*break mode*
+* **red**
+*long break*
+> * **purple**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+After each round there is a voice effect, what informs the user, that time is up.
 
-## Learn More
+The main challange I ran into was to create the timer's different modes, with the different timer header text, and that timer stop when long break is gone.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Technologies**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The technologies what are implemented in this project are React, React-Router 6, Javascript ES6 Firebase/Firestore, Sass/SCSS, React-Slider, React-Circular-Progressbar.
 
-### Code Splitting
+The application is fully responsive in all sizes.
+I recommend to use Iphone SE or Samsung Galaxy S8+ view.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### **How To Use The App**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+First of all you need to create an account if you don't registered yet, then login.
 
-### Making a Progressive Web App
+After login you'll be on the `home page`. At there you will see your focusing question, what you can update anytime.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+On the left side there is a `sidebar` from where you can switch between the pages.
 
-### Advanced Configuration
+On the top of the page there is a `navigation bar` with different buttons. If you aren't logged in yet you can see the `signup and the login button` and the logo. If you are logged in you can see just the logo and one `button with the text logout`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Just under the `navbar` there is an `theme selector icon` which you click and change the application mode to dark or light.
 
-### Deployment
+If you click on `New Timer` on the `sidebar` you can create a new timer easily.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have at least one timer click on the `Dashboard` on the `sidebar` and you will see a list of your timer(s). You can click one of them and go to the `timer page` or delete them.
 
-### `npm run build` fails to minify
+On the `timer page` you'll see the timer in original state. Click on the settings image and customize your timer. After that you can start the timer and pause if neccessary. If time is gone the timer will warn you with a voice effect, that you need to take a break.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Check it out on the web**
+
+Hosted by **Firebase**
+<stopwatch-fe69a.firebaseapp.com>
