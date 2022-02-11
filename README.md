@@ -40,13 +40,13 @@ The timer has three modes.
 Each mode has its own color on the progressbar
 
 > *work mode*
-* in progress **green**
->* paused **yellow**
+> * in progress **green**
+> * paused **yellow**
 
->*break mode*
->* **red**
+> *break mode*
+> * **red**
 
->*long break*
+> *long break*
 > * **purple**
 
 After each round there is a voice effect, what informs the user, that time is up.
@@ -78,8 +78,3 @@ If you click on `New Timer` on the `sidebar` you can create a new timer easily.
 If you have at least one timer click on the `Dashboard` on the `sidebar` and you will see a list of your timer(s). You can click one of them and go to the `timer page` or delete them.
 
 On the `timer page` you'll see the timer in original state. Click on the settings image and customize your timer. After that you can start the timer and pause if neccessary. If time is gone the timer will warn you with a voice effect, that you need to take a break.
-
-### **Check it out on the web**
-
-Hosted by **Firebase**
-[Stopwatch](stopwatch-fe69a.firebaseapp.com)
