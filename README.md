@@ -33,17 +33,20 @@ I started this process by using the `create-react-app` framework, then adding `r
 In the app after signup and login, there are different pages, one of the **home page**, where you can see your focising question, one of the **create new timer page**, one of the **dashboard** page, from where you can go to the **timer/id page**. Last page you can custumize your timer's details. 
 
 The timer has three modes.
-> *work*
-*break*
+> *work*,
+*break*,
 > *long break*
 
 Each mode has its own color on the progressbar
+
 > *work mode*
 * in progress **green**
-* paused **yellow**
-*break mode*
-* **red**
-*long break*
+>* paused **yellow**
+
+>*break mode*
+>* **red**
+
+>*long break*
 > * **purple**
 
 After each round there is a voice effect, what informs the user, that time is up.
@@ -79,4 +82,4 @@ On the `timer page` you'll see the timer in original state. Click on the setting
 ### **Check it out on the web**
 
 Hosted by **Firebase**
-<stopwatch-fe69a.firebaseapp.com>
+[Stopwatch](stopwatch-fe69a.firebaseapp.com)
